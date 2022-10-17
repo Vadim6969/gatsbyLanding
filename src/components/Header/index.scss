@@ -1,0 +1,97 @@
+@import "src/scss/variables";
+.header {
+  max-width: 1376px;
+  display: flex;
+  align-items: center;
+  &__contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    a {
+      display: block;
+      color: $dark-gray;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}
+.nav {
+  display: flex;
+  margin: 0 auto;
+  &__item {
+    cursor: pointer;
+    text-decoration: none;
+    color: $dark-gray;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+    transition: 0.2s ease-in-out;
+    &:hover {
+      color: white;
+    }
+  }
+}
+.header {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  position: relative;
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  @media (max-width: 1460px) {
+    width: 93%;
+  }
+
+}
+.header:after,
+.header:before {
+  mix-blend-mode:multiply;
+  filter:none;
+  z-index: -1;
+  content:'';
+  width: calc(100% + 90px);
+  height: calc(100% + 90px);
+  position: absolute;
+  animation: anim-header 10s ease-in-out infinite;
+}
+@keyframes anim-header {
+  0%, 100% {
+    clip-path: polygon(0 0, calc(100% - (33px)) calc(0% + (33px)), 100% 100%, calc(0% + (33px)) calc(100% - (33px)));
+  }
+  50% {
+    clip-path: polygon(calc(0% + (33px)) calc(0% + (33px)), 100% 0, calc(100% - (33px)) calc(100% - (33px)), 0 100%);
+  }
+}
+.header:after{
+  animation-delay: -5s;
+  background-color: rgba(37, 58, 77, 0.98);
+  clip-path: polygon(0 0, calc(100% - (33px)) calc(0% + (33px)), 100% 100%, calc(0% + (33px)) calc(100% - (33px)));
+}
+.header:before {
+  background-color: #000;
+  clip-path: polygon(calc(0% + (33px)) calc(0% + (33px)), 100% 0, calc(100% - (33px)) calc(100% - (33px)), 0 100%);
+}
+.header:hover:before,
+.header:hover:after {
+  animation-play-state: paused;
+}
+
+
+@media (max-width: 1024px) {
+  .nav__item, .header__contacts a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 960px) {
+  .header {
+    display: none;
+  }
+}

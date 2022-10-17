@@ -1,0 +1,60 @@
+.competencies-sections {
+  margin-top: 4rem;
+  padding: 5rem;
+  background-image: url("../../images/competencies.png");
+  display: flex;
+  justify-content: right;
+  @media (max-width: 1336px) {
+    padding-top: 2.5rem;
+  }
+}
+
+.competencies {
+  &__title {
+    color: white;
+    margin-bottom: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 68px;
+    @media (max-width: 1336px) {
+      font-size: 32px;
+      line-height: 32px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 28px;
+      line-height: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 2rem;
+    justify-content: right;
+    list-style-type: none;
+  }
+  &__item {
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    img {
+      padding: 1.5rem;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      object-fit: contain;
+    }
+    @media (max-width: 1336px) {
+      width: 90px;
+      height: 90px;
+      img {
+        padding: 0.7rem;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        object-fit: contain;
+      }
+    }
+  }
+}

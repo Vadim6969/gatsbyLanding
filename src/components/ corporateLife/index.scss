@@ -1,0 +1,50 @@
+.corporate-life {
+  overflow: hidden;
+  padding: 2rem;
+  margin-top: 4rem;
+  background-color: rgba(13,30,41,.5);
+  &__title {
+    color: #9EA5A9;
+    margin-bottom: 1rem;
+    span {
+      color: white;
+    }
+  }
+  &__wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem
+  }
+  &__item {
+    width: 50%;
+    display: flex;
+    p {
+      color: white;
+    }
+    ul {
+      color: white;
+      li {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    &-wrapper {
+      margin-left: 2rem !important;
+      justify-content: space-evenly;
+      display: flex;
+      flex-direction: column;
+      list-style-type: decimal ;
+
+    }
+  }
+  .slider {
+    .swiper-container {
+      max-width: 1376px;
+      .swiper-button-next, .swiper-button-prev {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.button-component {
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.23em;
+  color: #0D1E29;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+  border-radius: 4px;
+  a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.23em;
+    color: #0D1E29;
+  }
+  &:hover {
+    a {
+      color: white;
+    }
+    background-color: #0D1E29;
+    color: white;
+  }
+}
